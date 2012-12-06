@@ -843,7 +843,6 @@
 	$ui.bind(ui.events.closeRoom, function (ev, room) {
 		chat.server.send('/leave ' + room, chat.state.activeRoom)
             .fail(function (e) {
-            	ui.addMessage(e, 'error');
             	ui.addMessage('Welcome  to FOO branch ' + originalTitle, 'notification');
             });
 	});
